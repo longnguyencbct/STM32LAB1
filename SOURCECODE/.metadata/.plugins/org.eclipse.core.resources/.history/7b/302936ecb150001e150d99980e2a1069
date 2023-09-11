@@ -106,26 +106,26 @@ int main(void)
   	}
   }
   void OnRed(){
-	  HAL_GPIO_WritePin (LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_RESET);
-  }
-  void OnYellow(){
-	  HAL_GPIO_WritePin (LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_RESET);
-  }
-  void OnGreen(){
-	  HAL_GPIO_WritePin (LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_RESET);
-  }
-  void OffRed(){
 	  HAL_GPIO_WritePin (LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_SET);
   }
-  void OffYellow(){
+  void OnYellow(){
 	  HAL_GPIO_WritePin (LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_SET);
   }
-  void OffGreen(){
+  void OnGreen(){
 	  HAL_GPIO_WritePin (LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_SET);
   }
-  int red_flag=1;
-  int yellow_flag=0;
-  int green_flag=0;
+  void OffRed(){
+	  HAL_GPIO_WritePin (LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_RESET);
+  }
+  void OffYellow(){
+	  HAL_GPIO_WritePin (LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_RESET);
+  }
+  void OffGreen(){
+	  HAL_GPIO_WritePin (LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_RESET);
+  }
+  bool red_flag=true;
+  bool yellow_flag=false;
+  bool green_flag=false;
   setTimer1(500);
   OnRed();
   OffYellow();
@@ -133,27 +133,27 @@ int main(void)
   while (1)
   {
   	  //LAB1 EX2
-  	  if(timer1_flag==1&&red_flag==1){
+  	  if(timer1_flag==1&&red_flag){
   		  OffRed();
-  		  OnGreen();
-  		  red_flag=0;
-  		  green_flag=1;
-  		  setTimer1(300);
+  		  OnYellow();
+  		  red_flag=false;
+  		  yellow_flag=true;
+  		  setTimer1(200);
   	  }
-  	  else if(timer1_flag==1&&yellow_flag==1){
+  	  else if(timer1_flag==1&&yellow_flag){
   	  		  OffYellow();
-  	  		  OnRed();
-  	  		  yellow_flag=0;
-  	  		  red_flag=1;
-  	  		  setTimer1(500);
+  	  		  OnGreen();
+  	  		  yellow_flag=false;
+  	  		  green_flag=true;
+  	  		  setTimer1(300);
   	 }
-  	else if(timer1_flag==1&&green_flag==1){
+  	else if(timer1_flag==1&&green_flag){
   	  	  		  OffGreen();
-  	  	  		  OnYellow();
-  	  	  		  green_flag=0;
-  	  	  		  yellow_flag=1;
-  	  	  		  setTimer1(200);
-  	 }
+  	  	  		  OnRed();
+  	  	  		  green_flag=false;
+  	  	  		  red_flag=true;
+  	  	  		  setTimer1(500);
+  	  	 }
   	  timerRun();
   	  HAL_Delay(10);
     /* USER CODE END WHILE */
