@@ -201,8 +201,9 @@ int main(void)
   		  }
   		  State(state);
   	  }
-  	  timerRun();
-  	  HAL_Delay(10);
+  }
+  timerRun();
+  HAL_Delay(10);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

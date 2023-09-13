@@ -176,7 +176,6 @@ int main(void)
 	  		  OnGreen2();
 	  		  setTimer1(300);
 	  		  break;
-	  }
 }
 
 /////////////////////////////////////////////////
@@ -189,20 +188,21 @@ int main(void)
   OnGreen2();
 
   setTimer1(300);
-  int state=0;
+  int s=0;
   while (1)
   {
   	  //LAB1 EX3
   	  if(timer1_flag==1){
-  		  if(state==3){
-  			  state=0;
+  		  if(s==3){
+  			  s=0;
   		  }else{
-  			  state++;
+  			  s++;
   		  }
-  		  State(state);
+  		  State(s);
   	  }
-  	  timerRun();
-  	  HAL_Delay(10);
+  }
+  timerRun();
+  HAL_Delay(10);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

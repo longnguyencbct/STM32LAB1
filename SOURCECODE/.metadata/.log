@@ -25,3 +25,33 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2023-09-11 20:53:55.256
 !MESSAGE Won't launch debug session since we failed to locate the binary.
+!SESSION 2023-09-12 14:36:16.287 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-09-12 14:36:38.608
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-09-12 14:36:38.677
+!MESSAGE Log4j initialized with config file C:\D\University\MPU_MCU\REAL_demo_lab_workspace\Lab1\GIT_LAB1\SOURCECODE\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-09-12 14:36:45.055
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-09-13 09:13:16.532 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-09-13 09:13:43.458
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-09-13 09:13:43.542
+!MESSAGE Log4j initialized with config file C:\D\University\MPU_MCU\REAL_demo_lab_workspace\Lab1\GIT_LAB1\SOURCECODE\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-09-13 09:13:50.636
+!MESSAGE Started RMI Server, listening on port 41337

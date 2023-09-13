@@ -144,41 +144,10 @@ int main(void)
   }
 /////////////////////////////////////////////////
   void State(int s){
-	  switch (s) {
-	  	  case 0:
-	  		  OffYellow1();
-	  		  OffRed2();
-	  		  OnRed1();
-	  		  OnGreen2();
-	  		  setTimer1(300);
-	  		  break;
-	  	  case 1:
-	  		  OffGreen2();
-	  		  OnYellow2();
-	  		  setTimer1(200);
-	  		  break;
-	  	  case 2:
-	  		  OffRed1();
-	  		  OffYellow2();
-	  		  OnGreen1();
-	  		  OnRed2();
-	  		  setTimer1(300);
-	  		  break;
-	  	  case 3:
-	  		  OffGreen1();
-	  		  OnYellow1();
-	  		  setTimer1(200);
-	  		  break;
-	  	  default:
-	  		  OffYellow1();
-	  		  OffRed2();
-	  		  OnRed1();
-	  		  OnGreen2();
-	  		  setTimer1(300);
-	  		  break;
-	  }
-}
 
+
+
+  }
 /////////////////////////////////////////////////
   OnRed1();
   OffYellow1();
@@ -189,18 +158,30 @@ int main(void)
   OnGreen2();
 
   setTimer1(300);
-  int state=0;
   while (1)
   {
-  	  //LAB1 EX3
-  	  if(timer1_flag==1){
-  		  if(state==3){
-  			  state=0;
-  		  }else{
-  			  state++;
-  		  }
-  		  State(state);
+  	  //LAB1 EX2
+  	  if(timer1_flag==1&&red_flag==1){
+  		  OffRed();
+  		  OnGreen();
+  		  red_flag=0;
+  		  green_flag=1;
+  		  setTimer1(300);
   	  }
+  	  else if(timer1_flag==1&&yellow_flag==1){
+  	  		  OffYellow();
+  	  		  OnRed();
+  	  		  yellow_flag=0;
+  	  		  red_flag=1;
+  	  		  setTimer1(500);
+  	 }
+  	else if(timer1_flag==1&&green_flag==1){
+  	  	  		  OffGreen();
+  	  	  		  OnYellow();
+  	  	  		  green_flag=0;
+  	  	  		  yellow_flag=1;
+  	  	  		  setTimer1(200);
+  	 }
   	  timerRun();
   	  HAL_Delay(10);
     /* USER CODE END WHILE */
