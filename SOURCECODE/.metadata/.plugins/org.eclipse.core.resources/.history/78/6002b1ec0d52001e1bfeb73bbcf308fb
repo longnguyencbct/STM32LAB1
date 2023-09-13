@@ -90,189 +90,119 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-/////////////////////////////////////////////////
-  void OnP_A(){
-	  HAL_GPIO_WritePin (P_A_GPIO_Port, P_A_Pin, GPIO_PIN_RESET);
-  }
-  void OnP_B(){
-	  HAL_GPIO_WritePin (P_B_GPIO_Port, P_B_Pin, GPIO_PIN_RESET);
-  }
-  void OnP_C(){
-	  HAL_GPIO_WritePin (P_C_GPIO_Port, P_C_Pin, GPIO_PIN_RESET);
-  }
-  void OnP_D(){
-	  HAL_GPIO_WritePin (P_D_GPIO_Port, P_D_Pin, GPIO_PIN_RESET);
-  }
-  void OnP_E(){
-	  HAL_GPIO_WritePin (P_E_GPIO_Port, P_E_Pin, GPIO_PIN_RESET);
-  }
-  void OnP_F(){
-	  HAL_GPIO_WritePin (P_F_GPIO_Port, P_F_Pin, GPIO_PIN_RESET);
-  }
-  void OnP_G(){
-	  HAL_GPIO_WritePin (P_G_GPIO_Port, P_G_Pin, GPIO_PIN_RESET);
-  }
+  int timer1_counter = 0;
+  int timer1_flag = 0;
 
-/////////////////////////////////////////////////
-  void OffP_A(){
-	  HAL_GPIO_WritePin (P_A_GPIO_Port, P_A_Pin, GPIO_PIN_SET);
+  void setTimer1(int duration){
+  	timer1_counter = duration;
+  	timer1_flag = 0;
   }
-  void OffP_B(){
-	  HAL_GPIO_WritePin (P_B_GPIO_Port, P_B_Pin, GPIO_PIN_SET);
+  void timerRun(){
+  	if(timer1_counter > 0){
+  		timer1_counter--;
+  		if(timer1_counter <= 0){
+  			timer1_flag = 1;
+  		}
+  	}
   }
-  void OffP_C(){
-	  HAL_GPIO_WritePin (P_C_GPIO_Port, P_C_Pin, GPIO_PIN_SET);
+  void OnRed1(){
+	  HAL_GPIO_WritePin (LED_RED1_GPIO_Port, LED_RED1_Pin, GPIO_PIN_RESET);
   }
-  void OffP_D(){
-	  HAL_GPIO_WritePin (P_D_GPIO_Port, P_D_Pin, GPIO_PIN_SET);
+  void OnYellow1(){
+	  HAL_GPIO_WritePin (LED_YELLOW1_GPIO_Port, LED_YELLOW1_Pin, GPIO_PIN_RESET);
   }
-  void OffP_E(){
-	  HAL_GPIO_WritePin (P_E_GPIO_Port, P_E_Pin, GPIO_PIN_SET);
+  void OnGreen1(){
+	  HAL_GPIO_WritePin (LED_GREEN1_GPIO_Port, LED_GREEN1_Pin, GPIO_PIN_RESET);
   }
-  void OffP_F(){
-	  HAL_GPIO_WritePin (P_F_GPIO_Port, P_F_Pin, GPIO_PIN_SET);
+  void OffRed1(){
+	  HAL_GPIO_WritePin (LED_RED1_GPIO_Port, LED_RED1_Pin, GPIO_PIN_SET);
   }
-  void OffP_G(){
-	  HAL_GPIO_WritePin (P_G_GPIO_Port, P_G_Pin, GPIO_PIN_SET);
+  void OffYellow1(){
+	  HAL_GPIO_WritePin (LED_YELLOW1_GPIO_Port, LED_YELLOW1_Pin, GPIO_PIN_SET);
   }
-/////////////////////////////////////////////////
-  void ZERO(){
-	  OnP_A();
-	  OnP_B();
-	  OnP_C();
-	  OnP_D();
-	  OnP_E();
-	  OnP_F();
-	  OffP_G();
-  }
-  void ONE(){
-	  OffP_A();
-	  OnP_B();
-	  OnP_C();
-	  OffP_D();
-	  OffP_E();
-	  OffP_F();
-	  OffP_G();
-  }
-  void TWO(){
-	  OnP_A();
-	  OnP_B();
-	  OffP_C();
-	  OnP_D();
-	  OnP_E();
-	  OffP_F();
-	  OnP_G();
-  }
-  void THREE(){
-	  OnP_A();
-	  OnP_B();
-	  OnP_C();
-	  OnP_D();
-	  OffP_E();
-	  OffP_F();
-	  OnP_G();
-  }
-  void FOUR(){
-	  OffP_A();
-	  OnP_B();
-	  OnP_C();
-	  OffP_D();
-	  OffP_E();
-	  OnP_F();
-	  OnP_G();
-  }
-  void FIVE(){
-	  OnP_A();
-	  OffP_B();
-	  OnP_C();
-	  OnP_D();
-	  OffP_E();
-	  OnP_F();
-	  OnP_G();
-  }
-  void SIX(){
-	  OnP_A();
-	  OffP_B();
-	  OnP_C();
-	  OnP_D();
-	  OnP_E();
-	  OnP_F();
-	  OnP_G();
-  }
-  void SEVEN(){
-	  OnP_A();
-	  OnP_B();
-	  OnP_C();
-	  OffP_D();
-	  OffP_E();
-	  OffP_F();
-	  OffP_G();
-  }
-  void EIGHT(){
-	  OnP_A();
-	  OnP_B();
-	  OnP_C();
-	  OnP_D();
-	  OnP_E();
-	  OnP_F();
-	  OnP_G();
-  }
-  void NINE(){
-	  OnP_A();
-	  OnP_B();
-	  OnP_C();
-	  OnP_D();
-	  OffP_E();
-	  OnP_F();
-	  OnP_G();
+  void OffGreen1(){
+	  HAL_GPIO_WritePin (LED_GREEN1_GPIO_Port, LED_GREEN1_Pin, GPIO_PIN_SET);
   }
 /////////////////////////////////////////////////
-  void display7SEG(int num){
-	  switch (num) {
-	      case 0:
-	    	  ZERO();
-	          break;
-	      case 1:
-	    	  ONE();
-	          break;
-	      case 2:
-	    	  TWO();
-	          break;
-	      case 3:
-	    	  THREE();
-	          break;
-	      case 4:
-	    	  FOUR();
-	          break;
-	      case 5:
-	    	  FIVE();
-	          break;
-	      case 6:
-	    	  SIX();
-	          break;
-	      case 7:
-	    	  SEVEN();
-	          break;
-	      case 8:
-	    	  EIGHT();
-	          break;
-	      case 9:
-	    	  NINE();
-	          break;
-	      default:
-	    	  ZERO();
-	    	  break;
+  void OnRed2(){
+	  HAL_GPIO_WritePin (LED_RED2_GPIO_Port, LED_RED2_Pin, GPIO_PIN_RESET);
+  }
+  void OnYellow2(){
+	  HAL_GPIO_WritePin (LED_YELLOW2_GPIO_Port, LED_YELLOW2_Pin, GPIO_PIN_RESET);
+  }
+  void OnGreen2(){
+	  HAL_GPIO_WritePin (LED_GREEN2_GPIO_Port, LED_GREEN2_Pin, GPIO_PIN_RESET);
+  }
+  void OffRed2(){
+	  HAL_GPIO_WritePin (LED_RED2_GPIO_Port, LED_RED2_Pin, GPIO_PIN_SET);
+  }
+  void OffYellow2(){
+	  HAL_GPIO_WritePin (LED_YELLOW2_GPIO_Port, LED_YELLOW2_Pin, GPIO_PIN_SET);
+  }
+  void OffGreen2(){
+	  HAL_GPIO_WritePin (LED_GREEN2_GPIO_Port, LED_GREEN2_Pin, GPIO_PIN_SET);
+  }
+/////////////////////////////////////////////////
+  void State(int s){
+	  switch (s) {
+	  	  case 0:
+	  		  OffYellow1();
+	  		  OffRed2();
+	  		  OnRed1();
+	  		  OnGreen2();
+	  		  setTimer1(300);
+	  		  break;
+	  	  case 1:
+	  		  OffGreen2();
+	  		  OnYellow2();
+	  		  setTimer1(200);
+	  		  break;
+	  	  case 2:
+	  		  OffRed1();
+	  		  OffYellow2();
+	  		  OnGreen1();
+	  		  OnRed2();
+	  		  setTimer1(300);
+	  		  break;
+	  	  case 3:
+	  		  OffGreen1();
+	  		  OnYellow1();
+	  		  setTimer1(200);
+	  		  break;
+	  	  default:
+	  		  OffYellow1();
+	  		  OffRed2();
+	  		  OnRed1();
+	  		  OnGreen2();
+	  		  setTimer1(300);
+	  		  break;
 	  }
+}
 
-  }
 /////////////////////////////////////////////////
-  int counter = 0;
+  OnRed1();
+  OffYellow1();
+  OffGreen1();
+
+  OffRed2();
+  OffYellow2();
+  OnGreen2();
+
+  setTimer1(300);
+  int state=0;
   while (1)
   {
-  	  //LAB1 EX4
-	  if(counter>=10) counter=0;
-	  display7SEG(counter++);
-	  HAL_Delay(1000);
+  	  //LAB1 EX3
+  	  if(timer1_flag==1){
+  		  if(state==3){
+  			  state=0;
+  		  }else{
+  			  state++;
+  		  }
+  		  State(state);
+  	  }
+  	  timerRun();
+  	  HAL_Delay(10);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
