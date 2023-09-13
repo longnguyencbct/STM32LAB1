@@ -519,24 +519,6 @@ int main(void)
   	  if(IsOnSecond()){
   		  int sec=OnWhichSecond();
   		  //int state; already have
-  		  switch(state){
-			  case 0:
-				  display7SEG(sec+2,1);
-				  display7SEG(sec,2);
-				  break;
-			  case 1:
-				  display7SEG(sec,1);
-				  display7SEG(sec,2);
-				  break;
-			  case 2:
-				  display7SEG(sec,1);
-				  display7SEG(sec+2,2);
-				  break;
-			  case 3:
-				  display7SEG(sec,1);
-				  display7SEG(sec,2);
-				  break;
-  		  }
 
   	  }
   	  timerRun();

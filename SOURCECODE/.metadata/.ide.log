@@ -2920,3 +2920,35 @@
 2023-09-13 21:06:09,192 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 2694mS.
 2023-09-13 21:06:09,192 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
 2023-09-13 21:06:09,192 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2023-09-13 21:20:52,850 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 944172208 Bytes (1073741824)
+2023-09-13 21:20:54,505 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 718767888 Bytes (1073741824)
+2023-09-13 21:20:58,694 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 786398992 Bytes (1073741824)
+2023-09-13 21:20:58,889 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2023-09-13 21:20:58,889 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2023-09-13 21:20:58,889 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2023-09-13 21:20:58,889 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2023-09-13 21:20:58,889 [INFO] CodeGenerator:663 - code generatio: config db path: C:\D\Coding\STM32CubeIDE\Application\STM32CubeIDE_1.7.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.3.0.202107141111\\db\
+2023-09-13 21:20:59,089 [INFO] CodeEngine:239 - oldGeneratedFile, C:\D\University\MPU_MCU\REAL_demo_lab_workspace\Lab1\GIT_LAB1\SOURCECODE\Lab1\MXTmpFiles\license.tmp_save
+2023-09-13 21:20:59,148 [INFO] CodeEngine:257 - Generated code: C:\D\University\MPU_MCU\REAL_demo_lab_workspace\Lab1\GIT_LAB1\SOURCECODE\Lab1\MXTmpFiles\license.tmp
+2023-09-13 21:20:59,200 [INFO] CodeEngine:239 - oldGeneratedFile, C:\D\University\MPU_MCU\REAL_demo_lab_workspace\Lab1\GIT_LAB1\SOURCECODE\Lab1\MXTmpFiles\gpio.tmp_save
+2023-09-13 21:20:59,287 [INFO] CodeEngine:257 - Generated code: C:\D\University\MPU_MCU\REAL_demo_lab_workspace\Lab1\GIT_LAB1\SOURCECODE\Lab1\MXTmpFiles\gpio.tmp
+2023-09-13 21:20:59,395 [INFO] CodeEngine:239 - oldGeneratedFile, C:\D\University\MPU_MCU\REAL_demo_lab_workspace\Lab1\GIT_LAB1\SOURCECODE\Lab1\Core\Src\stm32f1xx_it.c_save
+2023-09-13 21:20:59,471 [INFO] CodeEngine:257 - Generated code: C:\D\University\MPU_MCU\REAL_demo_lab_workspace\Lab1\GIT_LAB1\SOURCECODE\Lab1\Core\Src\stm32f1xx_it.c
+2023-09-13 21:20:59,471 [INFO] CodeEngine:239 - oldGeneratedFile, C:\D\University\MPU_MCU\REAL_demo_lab_workspace\Lab1\GIT_LAB1\SOURCECODE\Lab1\Core\Inc\stm32f1xx_it.h_save
+2023-09-13 21:20:59,539 [INFO] CodeEngine:257 - Generated code: C:\D\University\MPU_MCU\REAL_demo_lab_workspace\Lab1\GIT_LAB1\SOURCECODE\Lab1\Core\Inc\stm32f1xx_it.h
+2023-09-13 21:20:59,556 [INFO] CodeEngine:239 - oldGeneratedFile, C:\D\University\MPU_MCU\REAL_demo_lab_workspace\Lab1\GIT_LAB1\SOURCECODE\Lab1\Core\Src\stm32f1xx_hal_msp.c_save
+2023-09-13 21:20:59,622 [INFO] CodeEngine:257 - Generated code: C:\D\University\MPU_MCU\REAL_demo_lab_workspace\Lab1\GIT_LAB1\SOURCECODE\Lab1\Core\Src\stm32f1xx_hal_msp.c
+2023-09-13 21:20:59,638 [INFO] CodeEngine:239 - oldGeneratedFile, C:\D\University\MPU_MCU\REAL_demo_lab_workspace\Lab1\GIT_LAB1\SOURCECODE\Lab1\MXTmpFiles\system.tmp_save
+2023-09-13 21:20:59,688 [INFO] CodeEngine:257 - Generated code: C:\D\University\MPU_MCU\REAL_demo_lab_workspace\Lab1\GIT_LAB1\SOURCECODE\Lab1\MXTmpFiles\system.tmp
+2023-09-13 21:20:59,705 [INFO] CodeEngine:239 - oldGeneratedFile, C:\D\University\MPU_MCU\REAL_demo_lab_workspace\Lab1\GIT_LAB1\SOURCECODE\Lab1\Core\Inc\stm32f1xx_hal_conf.h_save
+2023-09-13 21:20:59,770 [INFO] CodeEngine:257 - Generated code: C:\D\University\MPU_MCU\REAL_demo_lab_workspace\Lab1\GIT_LAB1\SOURCECODE\Lab1\Core\Inc\stm32f1xx_hal_conf.h
+2023-09-13 21:20:59,802 [INFO] CodeEngine:239 - oldGeneratedFile, C:\D\University\MPU_MCU\REAL_demo_lab_workspace\Lab1\GIT_LAB1\SOURCECODE\Lab1\Core\Inc\main.h_save
+2023-09-13 21:20:59,872 [INFO] CodeEngine:257 - Generated code: C:\D\University\MPU_MCU\REAL_demo_lab_workspace\Lab1\GIT_LAB1\SOURCECODE\Lab1\Core\Inc\main.h
+2023-09-13 21:20:59,872 [INFO] CodeEngine:239 - oldGeneratedFile, C:\D\University\MPU_MCU\REAL_demo_lab_workspace\Lab1\GIT_LAB1\SOURCECODE\Lab1\Core\Src\main.c_save
+2023-09-13 21:20:59,996 [INFO] CodeEngine:257 - Generated code: C:\D\University\MPU_MCU\REAL_demo_lab_workspace\Lab1\GIT_LAB1\SOURCECODE\Lab1\Core\Src\main.c
+2023-09-13 21:21:00,696 [INFO] ProjectBuilder:2578 - Time for Copy HAL[1] : 80mS.
+2023-09-13 21:21:00,696 [INFO] ProjectBuilder:3622 - Project Generator version: 3.14.1
+2023-09-13 21:21:01,054 [INFO] ConfigFileManager:1271 - The Die is : DIE412
+2023-09-13 21:21:02,974 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 2278mS.
+2023-09-13 21:21:02,974 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2023-09-13 21:21:02,974 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.

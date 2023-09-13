@@ -91,308 +91,180 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 /////////////////////////////////////////////////
-  void OnP_A(int i){
-	  switch(i){
-	  	  case 1:
-	  		  HAL_GPIO_WritePin (P_A1_GPIO_Port, P_A1_Pin, GPIO_PIN_RESET);
-	  		  break;
-	  	  case 2:
-	  		  HAL_GPIO_WritePin (P_A2_GPIO_Port, P_A2_Pin, GPIO_PIN_RESET);
-	  		  break;
-	  	  default:
-	  		  break;
-	  }
+  void OnP_A(){
+	  HAL_GPIO_WritePin (P_A_GPIO_Port, P_A_Pin, GPIO_PIN_RESET);
   }
-  void OnP_B(int i){
-	  switch(i){
-	  	  case 1:
-	  		  HAL_GPIO_WritePin (P_B1_GPIO_Port, P_B1_Pin, GPIO_PIN_RESET);
-	  		  break;
-	  	  case 2:
-	  		  HAL_GPIO_WritePin (P_B2_GPIO_Port, P_B2_Pin, GPIO_PIN_RESET);
-	  		  break;
-	  	  default:
-	  		  break;
-	  }
+  void OnP_B(){
+	  HAL_GPIO_WritePin (P_B_GPIO_Port, P_B_Pin, GPIO_PIN_RESET);
   }
-  void OnP_C(int i){
-	  switch(i){
-	  	  case 1:
-	  		  HAL_GPIO_WritePin (P_C1_GPIO_Port, P_C1_Pin, GPIO_PIN_RESET);
-	  		  break;
-	  	  case 2:
-	  		  HAL_GPIO_WritePin (P_C2_GPIO_Port, P_C2_Pin, GPIO_PIN_RESET);
-	  		  break;
-	  	  default:
-	  		  break;
-	  }
+  void OnP_C(){
+	  HAL_GPIO_WritePin (P_C_GPIO_Port, P_C_Pin, GPIO_PIN_RESET);
   }
-  void OnP_D(int i){
-	  switch(i){
-	  	  case 1:
-	  		  HAL_GPIO_WritePin (P_D1_GPIO_Port, P_D1_Pin, GPIO_PIN_RESET);
-	  		  break;
-	  	  case 2:
-	  		  HAL_GPIO_WritePin (P_D2_GPIO_Port, P_D2_Pin, GPIO_PIN_RESET);
-	  		  break;
-	  	  default:
-	  		  break;
-	  }
+  void OnP_D(){
+	  HAL_GPIO_WritePin (P_D_GPIO_Port, P_D_Pin, GPIO_PIN_RESET);
   }
-  void OnP_E(int i){
-	  switch(i){
-	  	  case 1:
-	  		  HAL_GPIO_WritePin (P_E1_GPIO_Port, P_E1_Pin, GPIO_PIN_RESET);
-	  		  break;
-	  	  case 2:
-	  		  HAL_GPIO_WritePin (P_E2_GPIO_Port, P_E2_Pin, GPIO_PIN_RESET);
-	  		  break;
-	  	  default:
-	  		  break;
-	  }
+  void OnP_E(){
+	  HAL_GPIO_WritePin (P_E_GPIO_Port, P_E_Pin, GPIO_PIN_RESET);
   }
-  void OnP_F(int i){
-	  switch(i){
-	  	  case 1:
-	  		  HAL_GPIO_WritePin (P_F1_GPIO_Port, P_F1_Pin, GPIO_PIN_RESET);
-	  		  break;
-	  	  case 2:
-	  		  HAL_GPIO_WritePin (P_F2_GPIO_Port, P_F2_Pin, GPIO_PIN_RESET);
-	  		  break;
-	  	  default:
-	  		  break;
-	  }
+  void OnP_F(){
+	  HAL_GPIO_WritePin (P_F_GPIO_Port, P_F_Pin, GPIO_PIN_RESET);
   }
-  void OnP_G(int i){
-	  switch(i){
-	  	  case 1:
-	  		  HAL_GPIO_WritePin (P_G1_GPIO_Port, P_G1_Pin, GPIO_PIN_RESET);
-	  		  break;
-	  	  case 2:
-	  		  HAL_GPIO_WritePin (P_G2_GPIO_Port, P_G2_Pin, GPIO_PIN_RESET);
-	  		  break;
-	  	  default:
-	  		  break;
-	  }
+  void OnP_G(){
+	  HAL_GPIO_WritePin (P_G_GPIO_Port, P_G_Pin, GPIO_PIN_RESET);
   }
 
 /////////////////////////////////////////////////
-  void OffP_A(int i){
-	  switch(i){
-	  	  case 1:
-	  		  HAL_GPIO_WritePin (P_A1_GPIO_Port, P_A1_Pin, GPIO_PIN_SET);
-	  		  break;
-	  	  case 2:
-	  		  HAL_GPIO_WritePin (P_A2_GPIO_Port, P_A2_Pin, GPIO_PIN_SET);
-	  		  break;
-	  	  default:
-	  		  break;
-	  }
+  void OffP_A(){
+	  HAL_GPIO_WritePin (P_A_GPIO_Port, P_A_Pin, GPIO_PIN_SET);
   }
-  void OffP_B(int i){
-	  switch(i){
-	  	  case 1:
-	  		  HAL_GPIO_WritePin (P_B1_GPIO_Port, P_B1_Pin, GPIO_PIN_SET);
-	  		  break;
-	  	  case 2:
-	  		  HAL_GPIO_WritePin (P_B2_GPIO_Port, P_B2_Pin, GPIO_PIN_SET);
-	  		  break;
-	  	  default:
-	  		  break;
-	  }
+  void OffP_B(){
+	  HAL_GPIO_WritePin (P_B_GPIO_Port, P_B_Pin, GPIO_PIN_SET);
   }
-  void OffP_C(int i){
-	  switch(i){
-	  	  case 1:
-	  		  HAL_GPIO_WritePin (P_C1_GPIO_Port, P_C1_Pin, GPIO_PIN_SET);
-	  		  break;
-	  	  case 2:
-	  		  HAL_GPIO_WritePin (P_C2_GPIO_Port, P_C2_Pin, GPIO_PIN_SET);
-	  		  break;
-	  	  default:
-	  		  break;
-	  }
+  void OffP_C(){
+	  HAL_GPIO_WritePin (P_C_GPIO_Port, P_C_Pin, GPIO_PIN_SET);
   }
-  void OffP_D(int i){
-	  switch(i){
-	  	  case 1:
-	  		  HAL_GPIO_WritePin (P_D1_GPIO_Port, P_D1_Pin, GPIO_PIN_SET);
-	  		  break;
-	  	  case 2:
-	  		  HAL_GPIO_WritePin (P_D2_GPIO_Port, P_D2_Pin, GPIO_PIN_SET);
-	  		  break;
-	  	  default:
-	  		  break;
-	  }
+  void OffP_D(){
+	  HAL_GPIO_WritePin (P_D_GPIO_Port, P_D_Pin, GPIO_PIN_SET);
   }
-  void OffP_E(int i){
-	  switch(i){
-	  	  case 1:
-	  		  HAL_GPIO_WritePin (P_E1_GPIO_Port, P_E1_Pin, GPIO_PIN_SET);
-	  		  break;
-	  	  case 2:
-	  		  HAL_GPIO_WritePin (P_E2_GPIO_Port, P_E2_Pin, GPIO_PIN_SET);
-	  		  break;
-	  	  default:
-	  		  break;
-	  }
+  void OffP_E(){
+	  HAL_GPIO_WritePin (P_E_GPIO_Port, P_E_Pin, GPIO_PIN_SET);
   }
-  void OffP_F(int i){
-	  switch(i){
-	  	  case 1:
-	  		  HAL_GPIO_WritePin (P_F1_GPIO_Port, P_F1_Pin, GPIO_PIN_SET);
-	  		  break;
-	  	  case 2:
-	  		  HAL_GPIO_WritePin (P_F2_GPIO_Port, P_F2_Pin, GPIO_PIN_SET);
-	  		  break;
-	  	  default:
-	  		  break;
-	  }
+  void OffP_F(){
+	  HAL_GPIO_WritePin (P_F_GPIO_Port, P_F_Pin, GPIO_PIN_SET);
   }
-  void OffP_G(int i){
-	  switch(i){
-	  	  case 1:
-	  		  HAL_GPIO_WritePin (P_G1_GPIO_Port, P_G1_Pin, GPIO_PIN_SET);
-	  		  break;
-	  	  case 2:
-	  		  HAL_GPIO_WritePin (P_G2_GPIO_Port, P_G2_Pin, GPIO_PIN_SET);
-	  		  break;
-	  	  default:
-	  		  break;
-	  }
+  void OffP_G(){
+	  HAL_GPIO_WritePin (P_G_GPIO_Port, P_G_Pin, GPIO_PIN_SET);
   }
 /////////////////////////////////////////////////
-  void ZERO(int i){
-	  OnP_A(i);
-	  OnP_B(i);
-	  OnP_C(i);
-	  OnP_D(i);
-	  OnP_E(i);
-	  OnP_F(i);
-	  OffP_G(i);
+  void ZERO(){
+	  OnP_A();
+	  OnP_B();
+	  OnP_C();
+	  OnP_D();
+	  OnP_E();
+	  OnP_F();
+	  OffP_G();
   }
-  void ONE(int i){
-	  OffP_A(i);
-	  OnP_B(i);
-	  OnP_C(i);
-	  OffP_D(i);
-	  OffP_E(i);
-	  OffP_F(i);
-	  OffP_G(i);
+  void ONE(){
+	  OffP_A();
+	  OnP_B();
+	  OnP_C();
+	  OffP_D();
+	  OffP_E();
+	  OffP_F();
+	  OffP_G();
   }
-  void TWO(int i){
-	  OnP_A(i);
-	  OnP_B(i);
-	  OffP_C(i);
-	  OnP_D(i);
-	  OnP_E(i);
-	  OffP_F(i);
-	  OnP_G(i);
+  void TWO(){
+	  OnP_A();
+	  OnP_B();
+	  OffP_C();
+	  OnP_D();
+	  OnP_E();
+	  OffP_F();
+	  OnP_G();
   }
-  void THREE(int i){
-	  OnP_A(i);
-	  OnP_B(i);
-	  OnP_C(i);
-	  OnP_D(i);
-	  OffP_E(i);
-	  OffP_F(i);
-	  OnP_G(i);
+  void THREE(){
+	  OnP_A();
+	  OnP_B();
+	  OnP_C();
+	  OnP_D();
+	  OffP_E();
+	  OffP_F();
+	  OnP_G();
   }
-  void FOUR(int i){
-	  OffP_A(i);
-	  OnP_B(i);
-	  OnP_C(i);
-	  OffP_D(i);
-	  OffP_E(i);
-	  OnP_F(i);
-	  OnP_G(i);
+  void FOUR(){
+	  OffP_A();
+	  OnP_B();
+	  OnP_C();
+	  OffP_D();
+	  OffP_E();
+	  OnP_F();
+	  OnP_G();
   }
-  void FIVE(int i){
-	  OnP_A(i);
-	  OffP_B(i);
-	  OnP_C(i);
-	  OnP_D(i);
-	  OffP_E(i);
-	  OnP_F(i);
-	  OnP_G(i);
+  void FIVE(){
+	  OnP_A();
+	  OffP_B();
+	  OnP_C();
+	  OnP_D();
+	  OffP_E();
+	  OnP_F();
+	  OnP_G();
   }
-  void SIX(int i){
-	  OnP_A(i);
-	  OffP_B(i);
-	  OnP_C(i);
-	  OnP_D(i);
-	  OnP_E(i);
-	  OnP_F(i);
-	  OnP_G(i);
+  void SIX(){
+	  OnP_A();
+	  OffP_B();
+	  OnP_C();
+	  OnP_D();
+	  OnP_E();
+	  OnP_F();
+	  OnP_G();
   }
-  void SEVEN(int i){
-	  OnP_A(i);
-	  OnP_B(i);
-	  OnP_C(i);
-	  OffP_D(i);
-	  OffP_E(i);
-	  OffP_F(i);
-	  OffP_G(i);
+  void SEVEN(){
+	  OnP_A();
+	  OnP_B();
+	  OnP_C();
+	  OffP_D();
+	  OffP_E();
+	  OffP_F();
+	  OffP_G();
   }
-  void EIGHT(int i){
-	  OnP_A(i);
-	  OnP_B(i);
-	  OnP_C(i);
-	  OnP_D(i);
-	  OnP_E(i);
-	  OnP_F(i);
-	  OnP_G(i);
+  void EIGHT(){
+	  OnP_A();
+	  OnP_B();
+	  OnP_C();
+	  OnP_D();
+	  OnP_E();
+	  OnP_F();
+	  OnP_G();
   }
-  void NINE(int i){
-	  OnP_A(i);
-	  OnP_B(i);
-	  OnP_C(i);
-	  OnP_D(i);
-	  OffP_E(i);
-	  OnP_F(i);
-	  OnP_G(i);
+  void NINE(){
+	  OnP_A();
+	  OnP_B();
+	  OnP_C();
+	  OnP_D();
+	  OffP_E();
+	  OnP_F();
+	  OnP_G();
   }
 /////////////////////////////////////////////////
-  void display7SEG(int num,int i){
+  void display7SEG(int num){
 	  switch (num) {
 	      case 0:
-	    	  ZERO(i);
+	    	  ZERO();
 	          break;
 	      case 1:
-	    	  ONE(i);
+	    	  ONE();
 	          break;
 	      case 2:
-	    	  TWO(i);
+	    	  TWO();
 	          break;
 	      case 3:
-	    	  THREE(i);
+	    	  THREE();
 	          break;
 	      case 4:
-	    	  FOUR(i);
+	    	  FOUR();
 	          break;
 	      case 5:
-	    	  FIVE(i);
+	    	  FIVE();
 	          break;
 	      case 6:
-	    	  SIX(i);
+	    	  SIX();
 	          break;
 	      case 7:
-	    	  SEVEN(i);
+	    	  SEVEN();
 	          break;
 	      case 8:
-	    	  EIGHT(i);
+	    	  EIGHT();
 	          break;
 	      case 9:
-	    	  NINE(i);
+	    	  NINE();
 	          break;
 	      default:
-	    	  ZERO(i);
+	    	  ZERO();
 	    	  break;
 	  }
 
   }
-/////////////////////////////////////////////////
-//=============================================//
 /////////////////////////////////////////////////
   int timer1_counter = 0;
     int timer1_flag = 0;
@@ -447,16 +319,6 @@ int main(void)
   	  HAL_GPIO_WritePin (LED_GREEN2_GPIO_Port, LED_GREEN2_Pin, GPIO_PIN_SET);
     }
   /////////////////////////////////////////////////
-    int IsOnSecond(){
-    	if(timer1_counter%100==0){
-    		return 1;
-    	}
-    	return 0;
-    }
-    int OnWhichSecond(){
-    	return timer1_counter/100;
-    }
-  /////////////////////////////////////////////////
     void State(int s){
   	  switch (s) {
   	  	  case 0:
@@ -492,6 +354,7 @@ int main(void)
   	  		  break;
   	  }
   }
+
   /////////////////////////////////////////////////
     OnRed1();
     OffYellow1();
@@ -504,43 +367,11 @@ int main(void)
     setTimer1(300);
     int state=0;
 /////////////////////////////////////////////////
+  int counter = 0;
   while (1)
   {
   	  //LAB1 EX5
-  	  if(timer1_flag==1){
-  		  if(state==3){
-  			  state=0;
-  		  }else{
-  			  state++;
-  		  }
-  		  State(state);
-  	  }
-  	  //TODO/////////////////////////////////////////////////////////////////
-  	  if(IsOnSecond()){
-  		  int sec=OnWhichSecond();
-  		  //int state; already have
-  		  switch(state){
-			  case 0:
-				  display7SEG(sec+2,1);
-				  display7SEG(sec,2);
-				  break;
-			  case 1:
-				  display7SEG(sec,1);
-				  display7SEG(sec,2);
-				  break;
-			  case 2:
-				  display7SEG(sec,1);
-				  display7SEG(sec+2,2);
-				  break;
-			  case 3:
-				  display7SEG(sec,1);
-				  display7SEG(sec,2);
-				  break;
-  		  }
 
-  	  }
-  	  timerRun();
-  	  HAL_Delay(10);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -601,10 +432,8 @@ static void MX_GPIO_Init(void)
                           |LED_YELLOW2_Pin|LED_GREEN2_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, P_A1_Pin|P_B1_Pin|P_C1_Pin|P_D2_Pin
-                          |P_E2_Pin|P_F2_Pin|P_G2_Pin|P_D1_Pin
-                          |P_E1_Pin|P_F1_Pin|P_G1_Pin|P_A2_Pin
-                          |P_B2_Pin|P_C2_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, P_A_Pin|P_B_Pin|P_C_Pin|P_D_Pin
+                          |P_E_Pin|P_F_Pin|P_G_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : LED_RED1_Pin LED_YELLOW1_Pin LED_GREEN1_Pin LED_RED2_Pin
                            LED_YELLOW2_Pin LED_GREEN2_Pin */
@@ -615,14 +444,10 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : P_A1_Pin P_B1_Pin P_C1_Pin P_D2_Pin
-                           P_E2_Pin P_F2_Pin P_G2_Pin P_D1_Pin
-                           P_E1_Pin P_F1_Pin P_G1_Pin P_A2_Pin
-                           P_B2_Pin P_C2_Pin */
-  GPIO_InitStruct.Pin = P_A1_Pin|P_B1_Pin|P_C1_Pin|P_D2_Pin
-                          |P_E2_Pin|P_F2_Pin|P_G2_Pin|P_D1_Pin
-                          |P_E1_Pin|P_F1_Pin|P_G1_Pin|P_A2_Pin
-                          |P_B2_Pin|P_C2_Pin;
+  /*Configure GPIO pins : P_A_Pin P_B_Pin P_C_Pin P_D_Pin
+                           P_E_Pin P_F_Pin P_G_Pin */
+  GPIO_InitStruct.Pin = P_A_Pin|P_B_Pin|P_C_Pin|P_D_Pin
+                          |P_E_Pin|P_F_Pin|P_G_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
