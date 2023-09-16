@@ -22,6 +22,21 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+int timer1_counter = 0;
+int timer1_flag = 0;
+
+void setTimer1(int duration){
+	timer1_counter = duration;
+	timer1_flag = 0;
+}
+void timerRun(){
+	if(timer1_counter > 0){
+		timer1_counter--;
+		if(timer1_counter <= 0){
+			timer1_flag = 1;
+		}
+	}
+}
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -166,7 +181,7 @@ int main(void)
     }
     ////////////////////////////////////////////////
     void Ex6_func(int t){
-    	switch(t){
+    	switch(t):
     		case 0:
     			OffP_11();
     			OnP_0();
@@ -219,26 +234,11 @@ int main(void)
     			OffP_11();
     			OnP_0();
     			break;
-    	}
-    }
-    ////////////////////////////////////////////////
-    int timer1_counter = 0;
-    int timer1_flag = 0;
 
-    void setTimer1(int duration){
-    	timer1_counter = duration;
-    	timer1_flag = 0;
-    }
-    void timerRun(){
-    	if(timer1_counter > 0){
-    		timer1_counter--;
-    		if(timer1_counter <= 0){
-    			timer1_flag = 1;
-    		}
-    	}
+
     }
     ////////////////////////////////////////////////
-    OnP_0();
+    OffP_0();
     OffP_1();
     OffP_2();
     OffP_3();
@@ -250,20 +250,9 @@ int main(void)
     OffP_9();
     OffP_10();
     OffP_11();
-    int currT=0;
-    setTimer1(100);
   while (1)
   {
 	  // LAB1 EX6
-	  if(timer1_flag==1){
-		  if(currT>=11){
-			  currT=-1;
-		  }
-		  currT++;
-		  Ex6_func(currT);
-		  setTimer1(100);
-	  }
-	  timerRun();
 	  HAL_Delay(10);
     /* USER CODE END WHILE */
 
@@ -322,7 +311,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, P_0_Pin|P_1_Pin|P_2_Pin|P_3_Pin
                           |P_4_Pin|P_5_Pin|P_6_Pin|P_7_Pin
-                          |P_8_Pin|P_9_Pin|P_10_Pin|P_11_Pin, GPIO_PIN_SET);
+                          |P_8_Pin|P_9_Pin|P_10_Pin|P_11_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : P_0_Pin P_1_Pin P_2_Pin P_3_Pin
                            P_4_Pin P_5_Pin P_6_Pin P_7_Pin
