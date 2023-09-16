@@ -113,7 +113,7 @@ int main(void)
   }
   while (1)
   {
-	  // LAB1 EX6
+	  //MAIN
 	  HAL_Delay(10);
     /* USER CODE END WHILE */
 
