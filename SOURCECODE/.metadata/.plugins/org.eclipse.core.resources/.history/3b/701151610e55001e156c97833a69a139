@@ -193,84 +193,56 @@ int main(void)
     	switch(i){
     	case 0:
     		OnP_0();
-    		break;
     	case 1:
     		OnP_1();
-    		break;
     	case 2:
     		OnP_2();
-    		break;
     	case 3:
     		OnP_3();
-    		break;
     	case 4:
     		OnP_4();
-    		break;
     	case 5:
     		OnP_5();
-    		break;
     	case 6:
     		OnP_6();
-    		break;
     	case 7:
     		OnP_7();
-    		break;
     	case 8:
     		OnP_8();
-    		break;
     	case 9:
     		OnP_9();
-    		break;
     	case 10:
     		OnP_10();
-    		break;
     	case 11:
     		OnP_11();
-    		break;
-    	default:
-    		OnP_0();
     	}
     }
     void clearNumberOnClock(int i){
     	switch(i){
     	case 0:
     		OffP_0();
-    		break;
     	case 1:
     		OffP_1();
-    		break;
     	case 2:
     		OffP_2();
-    		break;
     	case 3:
     		OffP_3();
-    		break;
     	case 4:
     		OffP_4();
-    		break;
     	case 5:
     		OffP_5();
-    		break;
     	case 6:
     		OffP_6();
-    		break;
     	case 7:
     		OffP_7();
-    		break;
     	case 8:
     		OffP_8();
-    		break;
     	case 9:
     		OffP_9();
-    		break;
     	case 10:
     		OffP_10();
-    		break;
     	case 11:
     		OffP_11();
-    		break;
-    	default:
-    		OffP_0();
     	}
     }
 
@@ -292,7 +264,7 @@ int main(void)
     }
     ////////////////////////////////////////////////
     int OnSecond(){
-    	if(timer1_flag==1){
+    	if(timer1_flag){
     		CurrSecond++;
     		return 1;
     	}
@@ -330,23 +302,19 @@ int main(void)
 	  // LAB1 EX7
 	  HAL_Delay(10);
 	  timerRun();
-	  if(timer1_flag==1){
-		  LastSecond=CurrSecond;
-		  LastMinute=CurrMinute;
-		  LastHour=CurrHour;
-		  OnSecond();// check to add 1 to CurrSecond
-		  CheckMinute(); // check to add 1 to CurrMinute and update CurrSecond
-		  CheckHour(); // check to add 1 to CurrHour and update CurrMinute
-		  CheckResetTime(); // update CurrHour
-		  if(LastSecond/5!=CurrSecond/5){
-			  clearAllClock();
-			  setNumberOnClock(CurrSecond/5);
-			  setNumberOnClock(CurrMinute/5);
-			  setNumberOnClock(CurrHour);
-		  }
-		  setTimer1(OneSecond);
+	  LastSecond=CurrSecond;
+	  LastMinute=CurrMinute;
+	  LastHour=CurrHour;
+	  OnSecond();// check to add 1 to CurrSecond
+	  CheckMinute(); // check to add 1 to CurrMinute and update CurrSecond
+	  CheckHour(); // check to add 1 to CurrHour and update CurrMinute
+	  CheckResetTime(); // update CurrHour
+	  if(LastSecond/5!=CurrSecond/5){
+		  clearAllClock();
+		  setNumberOnClock(CurrSecond/5);
+		  setNumberOnClock(CurrMinute/5);
+		  setNumberOnClock(CurrHour);
 	  }
-
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

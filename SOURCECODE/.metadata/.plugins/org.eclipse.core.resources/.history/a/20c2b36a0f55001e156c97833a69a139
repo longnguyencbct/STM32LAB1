@@ -101,77 +101,77 @@ int main(void)
   int LastHour=11;
   ////////////////////////////////////////////////
   void OnP_0(){
-	  HAL_GPIO_WritePin (P_0_GPIO_Port, P_0_Pin, GPIO_PIN_RESET);
+	  HAL_GPIO_WritePin (P_0_GPIO_Port, P_0_Pin, GPIO_PIN_SET);
   }
   void OnP_1(){
-	  HAL_GPIO_WritePin (P_1_GPIO_Port, P_1_Pin, GPIO_PIN_RESET);
+	  HAL_GPIO_WritePin (P_1_GPIO_Port, P_1_Pin, GPIO_PIN_SET);
   }
   void OnP_2(){
-	  HAL_GPIO_WritePin (P_2_GPIO_Port, P_2_Pin, GPIO_PIN_RESET);
+	  HAL_GPIO_WritePin (P_2_GPIO_Port, P_2_Pin, GPIO_PIN_SET);
   }
   void OnP_3(){
-	  HAL_GPIO_WritePin (P_3_GPIO_Port, P_3_Pin, GPIO_PIN_RESET);
+	  HAL_GPIO_WritePin (P_3_GPIO_Port, P_3_Pin, GPIO_PIN_SET);
   }
   void OnP_4(){
-	  HAL_GPIO_WritePin (P_4_GPIO_Port, P_4_Pin, GPIO_PIN_RESET);
+	  HAL_GPIO_WritePin (P_4_GPIO_Port, P_4_Pin, GPIO_PIN_SET);
   }
   void OnP_5(){
-	  HAL_GPIO_WritePin (P_5_GPIO_Port, P_5_Pin, GPIO_PIN_RESET);
+	  HAL_GPIO_WritePin (P_5_GPIO_Port, P_5_Pin, GPIO_PIN_SET);
   }
   void OnP_6(){
-	  HAL_GPIO_WritePin (P_6_GPIO_Port, P_6_Pin, GPIO_PIN_RESET);
+	  HAL_GPIO_WritePin (P_6_GPIO_Port, P_6_Pin, GPIO_PIN_SET);
   }
   void OnP_7(){
-	  HAL_GPIO_WritePin (P_7_GPIO_Port, P_7_Pin, GPIO_PIN_RESET);
+	  HAL_GPIO_WritePin (P_7_GPIO_Port, P_7_Pin, GPIO_PIN_SET);
   }
   void OnP_8(){
-	  HAL_GPIO_WritePin (P_8_GPIO_Port, P_8_Pin, GPIO_PIN_RESET);
+	  HAL_GPIO_WritePin (P_8_GPIO_Port, P_8_Pin, GPIO_PIN_SET);
   }
   void OnP_9(){
-	  HAL_GPIO_WritePin (P_9_GPIO_Port, P_9_Pin, GPIO_PIN_RESET);
+	  HAL_GPIO_WritePin (P_9_GPIO_Port, P_9_Pin, GPIO_PIN_SET);
   }
   void OnP_10(){
-	  HAL_GPIO_WritePin (P_10_GPIO_Port, P_10_Pin, GPIO_PIN_RESET);
+	  HAL_GPIO_WritePin (P_10_GPIO_Port, P_10_Pin, GPIO_PIN_SET);
   }
   void OnP_11(){
-	  HAL_GPIO_WritePin (P_11_GPIO_Port, P_11_Pin, GPIO_PIN_RESET);
+	  HAL_GPIO_WritePin (P_11_GPIO_Port, P_11_Pin, GPIO_PIN_SET);
   }
   ////////////////////////////////////////////////
   void OffP_0(){
-  	  HAL_GPIO_WritePin (P_0_GPIO_Port, P_0_Pin, GPIO_PIN_SET);
+  	  HAL_GPIO_WritePin (P_0_GPIO_Port, P_0_Pin, GPIO_PIN_RESET);
     }
     void OffP_1(){
-  	  HAL_GPIO_WritePin (P_1_GPIO_Port, P_1_Pin, GPIO_PIN_SET);
+  	  HAL_GPIO_WritePin (P_1_GPIO_Port, P_1_Pin, GPIO_PIN_RESET);
     }
     void OffP_2(){
-  	  HAL_GPIO_WritePin (P_2_GPIO_Port, P_2_Pin, GPIO_PIN_SET);
+  	  HAL_GPIO_WritePin (P_2_GPIO_Port, P_2_Pin, GPIO_PIN_RESET);
     }
     void OffP_3(){
-  	  HAL_GPIO_WritePin (P_3_GPIO_Port, P_3_Pin, GPIO_PIN_SET);
+  	  HAL_GPIO_WritePin (P_3_GPIO_Port, P_3_Pin, GPIO_PIN_RESET);
     }
     void OffP_4(){
-  	  HAL_GPIO_WritePin (P_4_GPIO_Port, P_4_Pin, GPIO_PIN_SET);
+  	  HAL_GPIO_WritePin (P_4_GPIO_Port, P_4_Pin, GPIO_PIN_RESET);
     }
     void OffP_5(){
-  	  HAL_GPIO_WritePin (P_5_GPIO_Port, P_5_Pin, GPIO_PIN_SET);
+  	  HAL_GPIO_WritePin (P_5_GPIO_Port, P_5_Pin, GPIO_PIN_RESET);
     }
     void OffP_6(){
-  	  HAL_GPIO_WritePin (P_6_GPIO_Port, P_6_Pin, GPIO_PIN_SET);
+  	  HAL_GPIO_WritePin (P_6_GPIO_Port, P_6_Pin, GPIO_PIN_RESET);
     }
     void OffP_7(){
-  	  HAL_GPIO_WritePin (P_7_GPIO_Port, P_7_Pin, GPIO_PIN_SET);
+  	  HAL_GPIO_WritePin (P_7_GPIO_Port, P_7_Pin, GPIO_PIN_RESET);
     }
     void OffP_8(){
-  	  HAL_GPIO_WritePin (P_8_GPIO_Port, P_8_Pin, GPIO_PIN_SET);
+  	  HAL_GPIO_WritePin (P_8_GPIO_Port, P_8_Pin, GPIO_PIN_RESET);
     }
     void OffP_9(){
-  	  HAL_GPIO_WritePin (P_9_GPIO_Port, P_9_Pin, GPIO_PIN_SET);
+  	  HAL_GPIO_WritePin (P_9_GPIO_Port, P_9_Pin, GPIO_PIN_RESET);
     }
     void OffP_10(){
-  	  HAL_GPIO_WritePin (P_10_GPIO_Port, P_10_Pin, GPIO_PIN_SET);
+  	  HAL_GPIO_WritePin (P_10_GPIO_Port, P_10_Pin, GPIO_PIN_RESET);
     }
     void OffP_11(){
-  	  HAL_GPIO_WritePin (P_11_GPIO_Port, P_11_Pin, GPIO_PIN_SET);
+  	  HAL_GPIO_WritePin (P_11_GPIO_Port, P_11_Pin, GPIO_PIN_RESET);
     }
     ////////////////////////////////////////////////
     void clearAllClock(){

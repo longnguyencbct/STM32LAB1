@@ -92,7 +92,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   // GLOBAL VARIABLE
 
-  int OneSecond=100; // set duration of one second (100 = 1 real second)
+  int OneSecond=1; // set duration of one second (100 = 1 real second)
   int CurrSecond=0; // current second in the minute
   int CurrMinute=0; // current minute in the hour
   int CurrHour=0; // current hour in 12-hour period
