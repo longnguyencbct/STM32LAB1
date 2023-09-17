@@ -165,19 +165,61 @@ int main(void)
   	  HAL_GPIO_WritePin (P_11_GPIO_Port, P_11_Pin, GPIO_PIN_SET);
     }
     ////////////////////////////////////////////////
-    void clearAllClock(){
-        OffP_0();
-        OffP_1();
-        OffP_2();
-        OffP_3();
-        OffP_4();
-        OffP_5();
-        OffP_6();
-        OffP_7();
-        OffP_8();
-        OffP_9();
-        OffP_10();
-        OffP_11();
+    void Ex6_func(int t){
+    	switch(t){
+    		case 0:
+    			OffP_11();
+    			OnP_0();
+    			break;
+    		case 1:
+    			OffP_0();
+    			OnP_1();
+    			break;
+    		case 2:
+    			OffP_1();
+    			OnP_2();
+    			break;
+    		case 3:
+    			OffP_2();
+    			OnP_3();
+    			break;
+    		case 4:
+    			OffP_3();
+    			OnP_4();
+    			break;
+    		case 5:
+    			OffP_4();
+    			OnP_5();
+    			break;
+    		case 6:
+    			OffP_5();
+    			OnP_6();
+    			break;
+    		case 7:
+    			OffP_6();
+    			OnP_7();
+    			break;
+    		case 8:
+    			OffP_7();
+    			OnP_8();
+    			break;
+    		case 9:
+    			OffP_8();
+    			OnP_9();
+    			break;
+    		case 10:
+    			OffP_9();
+    			OnP_10();
+    			break;
+    		case 11:
+    			OffP_10();
+    			OnP_11();
+    			break;
+    		default:
+    			OffP_11();
+    			OnP_0();
+    			break;
+    	}
     }
     ////////////////////////////////////////////////
     int timer1_counter = 0;
@@ -212,8 +254,16 @@ int main(void)
     setTimer1(100);
   while (1)
   {
-	  // LAB1 EX7
-
+	  // LAB1 EX6
+	  if(timer1_flag==1){
+		  if(currT>=11){
+			  currT=-1;
+		  }
+		  currT++;
+		  Ex6_func(currT);
+		  setTimer1(100);
+	  }
+	  timerRun();
 	  HAL_Delay(10);
     /* USER CODE END WHILE */
 
