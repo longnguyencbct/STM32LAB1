@@ -208,34 +208,6 @@ int main(void)
     		On_P11();
     	}
     }
-    void clearNumberOnClock(int i){
-    	switch(i){
-    	case 0:
-    		Off_P0();
-    	case 1:
-    		Off_P1();
-    	case 2:
-    		Off_P2();
-    	case 3:
-    		Off_P3();
-    	case 4:
-    		Off_P4();
-    	case 5:
-    		Off_P5();
-    	case 6:
-    		Off_P6();
-    	case 7:
-    		Off_P7();
-    	case 8:
-    		Off_P8();
-    	case 9:
-    		Off_P9();
-    	case 10:
-    		Off_P10();
-    	case 11:
-    		Off_P11();
-    	}
-    }
 
     ////////////////////////////////////////////////
     int timer1_counter = 0;
