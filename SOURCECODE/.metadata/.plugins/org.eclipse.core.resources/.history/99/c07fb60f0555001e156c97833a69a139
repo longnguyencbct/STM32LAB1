@@ -180,36 +180,6 @@ int main(void)
         OffP_11();
     }
     ////////////////////////////////////////////////
-    void setNumberOnClock(int i){
-    	switch(i){
-    	case 0:
-    		On_P0();
-    	case 1:
-    		On_P1();
-    	case 2:
-    		On_P2();
-    	case 3:
-    		On_P3();
-    	case 4:
-    		On_P4();
-    	case 5:
-    		On_P5();
-    	case 6:
-    		On_P6();
-    	case 7:
-    		On_P7();
-    	case 8:
-    		On_P8();
-    	case 9:
-    		On_P9();
-    	case 10:
-    		On_P10();
-    	case 11:
-    		On_P11();
-    	}
-    }
-
-    ////////////////////////////////////////////////
     int timer1_counter = 0;
     int timer1_flag = 0;
 
