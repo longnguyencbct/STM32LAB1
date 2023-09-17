@@ -295,6 +295,7 @@ int main(void)
     }
     ////////////////////////////////////////////////
     clearAllClock();
+    int currT=0;
     setTimer1(OneSecond);
     setNumberOnClock(0);
   while (1)

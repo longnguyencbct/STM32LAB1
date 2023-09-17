@@ -90,15 +90,6 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  // GLOBAL VARIABLE
-
-  int OneSecond=100; // set duration of one second (100 = 1 real second)
-  int CurrSecond=0; // current second in the minute
-  int CurrMinute=0; // current minute in the hour
-  int CurrHour=0; // current hour in 12-hour period
-  int LastSecond=59;
-  int LastMinute=59;
-  int LastHour=11;
   ////////////////////////////////////////////////
   void OnP_0(){
 	  HAL_GPIO_WritePin (P_0_GPIO_Port, P_0_Pin, GPIO_PIN_RESET);
@@ -192,57 +183,57 @@ int main(void)
     void setNumberOnClock(int i){
     	switch(i){
     	case 0:
-    		OnP_0();
+    		On_P0();
     	case 1:
-    		OnP_1();
+    		On_P1();
     	case 2:
-    		OnP_2();
+    		On_P2();
     	case 3:
-    		OnP_3();
+    		On_P3();
     	case 4:
-    		OnP_4();
+    		On_P4();
     	case 5:
-    		OnP_5();
+    		On_P5();
     	case 6:
-    		OnP_6();
+    		On_P6();
     	case 7:
-    		OnP_7();
+    		On_P7();
     	case 8:
-    		OnP_8();
+    		On_P8();
     	case 9:
-    		OnP_9();
+    		On_P9();
     	case 10:
-    		OnP_10();
+    		On_P10();
     	case 11:
-    		OnP_11();
+    		On_P11();
     	}
     }
     void clearNumberOnClock(int i){
     	switch(i){
     	case 0:
-    		OffP_0();
+    		Off_P0();
     	case 1:
-    		OffP_1();
+    		Off_P1();
     	case 2:
-    		OffP_2();
+    		Off_P2();
     	case 3:
-    		OffP_3();
+    		Off_P3();
     	case 4:
-    		OffP_4();
+    		Off_P4();
     	case 5:
-    		OffP_5();
+    		Off_P5();
     	case 6:
-    		OffP_6();
+    		Off_P6();
     	case 7:
-    		OffP_7();
+    		Off_P7();
     	case 8:
-    		OffP_8();
+    		Off_P8();
     	case 9:
-    		OffP_9();
+    		Off_P9();
     	case 10:
-    		OffP_10();
+    		Off_P10();
     	case 11:
-    		OffP_11();
+    		Off_P11();
     	}
     }
 
@@ -263,70 +254,25 @@ int main(void)
     	}
     }
     ////////////////////////////////////////////////
-    int OnSecond(){
-    	if(timer1_flag){
-    		CurrSecond++;
-    		return 1;
-    	}
-    	return 0;
-    }
-    int CheckMinute(){
-    	if(CurrSecond>=60){
-    		CurrSecond=0;
-    		CurrMinute++;
-    		return 1;
-    	}
-    	return 0;
-    }
-    int CheckHour(){
-		if(CurrMinute>=60){
-			CurrMinute=0;
-			CurrHour++;
-			return 1;
-		}
-		return 0;
-    }
-    int CheckResetTime(){
-		if(CurrHour>=12){
-			CurrHour=0;
-			return 1;
-		}
-		return 0;
-    }
-    ////////////////////////////////////////////////
-    clearAllClock();
-    setTimer1(OneSecond);
-    setNumberOnClock(0);
+    OnP_0();
+    OffP_1();
+    OffP_2();
+    OffP_3();
+    OffP_4();
+    OffP_5();
+    OffP_6();
+    OffP_7();
+    OffP_8();
+    OffP_9();
+    OffP_10();
+    OffP_11();
+    int currT=0;
+    setTimer1(100);
   while (1)
   {
 	  // LAB1 EX7
+
 	  HAL_Delay(10);
-	  timerRun();
-	  LastSecond=CurrSecond;
-	  LastMinute=CurrMinute;
-	  LastHour=CurrHour;
-	  OnSecond();// check to add 1 to CurrSecond
-	  CheckMinute(); // check to add 1 to CurrMinute and update CurrSecond
-	  CheckHour(); // check to add 1 to CurrHour and update CurrMinute
-	  CheckResetTime(); // update CurrHour
-	  if(LastSecond/5!=CurrSecond/5){
-		  setNumberOnClock(CurrSecond/5);
-		  if(LastSecond/5 != LastMinute/5 && LastSecond/5 != LastHour){
-			  clearNumberOnClock(LastSecond/5);
-		  }
-	  }
-	  if(LastMinute/5!=CurrMinute/5){
-		  setNumberOnClock(CurrMinute/5);
-		  if(LastMinute/5 != LastSecond/5 && LastMinute/5 != LastHour){
-			  clearNumberOnClock(LastMinute/5);
-		  }
-	  }
-	  if(LastHour!=CurrHour){
-		  setNumberOnClock(CurrHour);
-		  if(LastHour != LastSecond/5 && LastHour != LastMinute/5){
-			  clearNumberOnClock(LastHour/5);
-		  }
-	  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
