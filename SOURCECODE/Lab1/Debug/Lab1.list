@@ -113,8 +113,8 @@ int main(void)
  800017c:	f000 fb11 	bl	80007a2 <SystemClock_Config>
   MX_GPIO_Init();
  8000180:	f000 fb4a 	bl	8000818 <MX_GPIO_Init>
-  int OneSecond=100; // set duration of one second (100 = 1 real second)
- 8000184:	2364      	movs	r3, #100	; 0x64
+  int OneSecond=1; // set duration of one second (100 = 1 real second)
+ 8000184:	2301      	movs	r3, #1
  8000186:	627b      	str	r3, [r7, #36]	; 0x24
   int CurrSecond=0; // current second in the minute
  8000188:	2300      	movs	r3, #0
